@@ -1,7 +1,8 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
-
+//The minimum value of the maximum pages assigned to any student.
 bool isValid(vector<int> &arr, int n, int m, int maxAllowedPages)
 { // o(n)
     int students = 1, pages = 0;
@@ -45,7 +46,7 @@ int allocateBooks(vector<int> &arr, int n, int m)
     }
 
     int ans = -1;
-    int st = 0;
+    int st = *max_element(arr.begin(), arr.end());
     int end = sum; // range of possible ans
 
     while (st <= end) // O(logN *n) N=range
