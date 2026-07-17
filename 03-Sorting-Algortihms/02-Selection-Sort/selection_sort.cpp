@@ -13,7 +13,7 @@ void selectionSort(int arr[], int n)
                 minIndex = j;
             }
         }
-        swap(arr[i], arr[minIndex]);
+        swap(arr[i], arr[minIndex]);// Swap the smallest element with the current element 
     }
 }
 void printArray(int arr[], int n)
